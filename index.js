@@ -310,11 +310,9 @@ var regionalFlavors = ["Pink Bubblegum",
 
 function getRandomFlavors(arr1, arr2, arr3, arr4){
 
-
     let arr5 = []; 
 
     while(arr5.length <= 29){
-
 
         let arr1Num = Math.floor(Math.random() * 29); 
         let arr2Num = Math.floor(Math.random() * 22);
@@ -329,16 +327,14 @@ function getRandomFlavors(arr1, arr2, arr3, arr4){
 
         arr5.push(arr4[arr4Num]); 
 
-       
-
     }
 
     arr5.pop(); 
 
-    console.log(arr5); 
+    return arr5; 
 
 
 }
 
 
-getRandomFlavors(originalFlavors,newFlavors,seasonalFlavors,regionalFlavors); 
+console.log(getRandomFlavors(originalFlavors,newFlavors,seasonalFlavors,regionalFlavors)); 
