@@ -308,8 +308,37 @@ var regionalFlavors = ["Pink Bubblegum",
     "Chocolate Chocolate Chip Cheesecake",
     "Caramel 'n' Cookies"]
 
-function getRandomFlavors(/*code here*/){
+function getRandomFlavors(arr1, arr2, arr3, arr4){
 
-    /*code here*/
+
+    let arr5 = []; 
+
+    while(arr5.length <= 29){
+
+
+        let arr1Num = Math.floor(Math.random() * 29); 
+        let arr2Num = Math.floor(Math.random() * 22);
+        let arr3Num = Math.floor(Math.random() * 23);
+        let arr4Num = Math.floor(Math.random() * 23);
+
+        arr5.push(arr1[arr1Num]); 
+
+        arr5.push(arr2[arr2Num]); 
+
+        arr5.push(arr3[arr3Num]); 
+
+        arr5.push(arr4[arr4Num]); 
+
+       
+
+    }
+
+    arr5.pop(); 
+
+    console.log(arr5); 
+
 
 }
+
+
+getRandomFlavors(originalFlavors,newFlavors,seasonalFlavors,regionalFlavors); 
