@@ -310,31 +310,34 @@ var regionalFlavors = ["Pink Bubblegum",
 
 function getRandomFlavors(arr1, arr2, arr3, arr4){
 
-    let arr5 = []; 
+    let arr5 = [];
+    let test = []; 
 
     while(arr5.length <= 29){
 
-        let arr1Num = Math.floor(Math.random() * 29); 
-        let arr2Num = Math.floor(Math.random() * 22);
-        let arr3Num = Math.floor(Math.random() * 23);
-        let arr4Num = Math.floor(Math.random() * 23);
+        let arr1Num = Math.floor(Math.random() * arr1.length); 
+        let arr2Num = Math.floor(Math.random() * arr2.length);
+        let arr3Num = Math.floor(Math.random() * arr3.length);
+        let arr4Num = Math.floor(Math.random() * arr4.length);
 
-        arr5.push(arr1[arr1Num]); 
+        arr5.push(arr1[arr1Num]);
+        arr1.splice(arr1Num, 1); 
 
-        arr5.push(arr2[arr2Num]); 
+        arr5.push(arr2[arr2Num]);
+        arr2.splice(arr2Num, 1); 
 
         arr5.push(arr3[arr3Num]); 
+        arr3.splice(arr3Num, 1); 
 
-        arr5.push(arr4[arr4Num]); 
+        arr5.push(arr4[arr4Num]);
+        arr4.splice(arr4Num, 1); 
 
     }
 
-    arr5.pop(); 
+    arr5.pop();
 
     return arr5; 
 
-
 }
 
-
-console.log(getRandomFlavors(originalFlavors,newFlavors,seasonalFlavors,regionalFlavors)); 
+console.log(getRandomFlavors(originalFlavors,newFlavors,seasonalFlavors,regionalFlavors));
